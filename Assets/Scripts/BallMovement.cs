@@ -36,6 +36,7 @@ public class BallMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Moves the ball at a constant speed using rigidbody physics
         rb2D.MovePosition(rb2D.position + (direction * speed * Time.fixedDeltaTime));
     }
 

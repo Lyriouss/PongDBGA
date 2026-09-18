@@ -93,7 +93,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             ""id"": ""6361fabd-72bf-4c18-9b00-d1757a456613"",
             ""actions"": [
                 {
-                    ""name"": ""Player1"",
+                    ""name"": ""P1Movement"",
                     ""type"": ""Value"",
                     ""id"": ""90fd791a-b6f4-4923-8356-23cfb42fbbec"",
                     ""expectedControlType"": ""Vector2"",
@@ -102,7 +102,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Player2"",
+                    ""name"": ""P2Movement"",
                     ""type"": ""Value"",
                     ""id"": ""ec817205-14be-4606-b094-e0ba74031437"",
                     ""expectedControlType"": ""Vector2"",
@@ -119,7 +119,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Player1"",
+                    ""action"": ""P1Movement"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -130,7 +130,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Player1"",
+                    ""action"": ""P1Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -141,7 +141,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Player1"",
+                    ""action"": ""P1Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -152,7 +152,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Player2"",
+                    ""action"": ""P2Movement"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -163,7 +163,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Player2"",
+                    ""action"": ""P2Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -174,7 +174,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Player2"",
+                    ""action"": ""P2Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 }
@@ -185,8 +185,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Player1 = m_Player.FindAction("Player1", throwIfNotFound: true);
-        m_Player_Player2 = m_Player.FindAction("Player2", throwIfNotFound: true);
+        m_Player_P1Movement = m_Player.FindAction("P1Movement", throwIfNotFound: true);
+        m_Player_P2Movement = m_Player.FindAction("P2Movement", throwIfNotFound: true);
     }
 
     ~@InputActions()
@@ -267,8 +267,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_Player1;
-    private readonly InputAction m_Player_Player2;
+    private readonly InputAction m_Player_P1Movement;
+    private readonly InputAction m_Player_P2Movement;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -281,13 +281,13 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// </summary>
         public PlayerActions(@InputActions wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "Player/Player1".
+        /// Provides access to the underlying input action "Player/P1Movement".
         /// </summary>
-        public InputAction @Player1 => m_Wrapper.m_Player_Player1;
+        public InputAction @P1Movement => m_Wrapper.m_Player_P1Movement;
         /// <summary>
-        /// Provides access to the underlying input action "Player/Player2".
+        /// Provides access to the underlying input action "Player/P2Movement".
         /// </summary>
-        public InputAction @Player2 => m_Wrapper.m_Player_Player2;
+        public InputAction @P2Movement => m_Wrapper.m_Player_P2Movement;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -314,12 +314,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-            @Player1.started += instance.OnPlayer1;
-            @Player1.performed += instance.OnPlayer1;
-            @Player1.canceled += instance.OnPlayer1;
-            @Player2.started += instance.OnPlayer2;
-            @Player2.performed += instance.OnPlayer2;
-            @Player2.canceled += instance.OnPlayer2;
+            @P1Movement.started += instance.OnP1Movement;
+            @P1Movement.performed += instance.OnP1Movement;
+            @P1Movement.canceled += instance.OnP1Movement;
+            @P2Movement.started += instance.OnP2Movement;
+            @P2Movement.performed += instance.OnP2Movement;
+            @P2Movement.canceled += instance.OnP2Movement;
         }
 
         /// <summary>
@@ -331,12 +331,12 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="PlayerActions" />
         private void UnregisterCallbacks(IPlayerActions instance)
         {
-            @Player1.started -= instance.OnPlayer1;
-            @Player1.performed -= instance.OnPlayer1;
-            @Player1.canceled -= instance.OnPlayer1;
-            @Player2.started -= instance.OnPlayer2;
-            @Player2.performed -= instance.OnPlayer2;
-            @Player2.canceled -= instance.OnPlayer2;
+            @P1Movement.started -= instance.OnP1Movement;
+            @P1Movement.performed -= instance.OnP1Movement;
+            @P1Movement.canceled -= instance.OnP1Movement;
+            @P2Movement.started -= instance.OnP2Movement;
+            @P2Movement.performed -= instance.OnP2Movement;
+            @P2Movement.canceled -= instance.OnP2Movement;
         }
 
         /// <summary>
@@ -378,18 +378,18 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     public interface IPlayerActions
     {
         /// <summary>
-        /// Method invoked when associated input action "Player1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "P1Movement" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnPlayer1(InputAction.CallbackContext context);
+        void OnP1Movement(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Player2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "P2Movement" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnPlayer2(InputAction.CallbackContext context);
+        void OnP2Movement(InputAction.CallbackContext context);
     }
 }

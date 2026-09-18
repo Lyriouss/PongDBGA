@@ -19,19 +19,21 @@ public class BallMovement : MonoBehaviour
         rb2D = GetComponent<Rigidbody2D>();
     }
 
-    private void Start()
+    private void OnEnable()
     {
-        ResetBall();
+        GameManager.OnBallReset += ResetBall;
     }
 
-    private void ResetBall()
+    private void OnDisable()
     {
-        float randomYPos = Random.Range(bottommostSpawnHeight, topmostSpawnHeight);
-        transform.position = new Vector2(0f, randomYPos);
+        GameManager.OnBallReset -= ResetBall;
+    }
+
+    private void ResetBall(Vector2 newDir)
+    {
+        //Sets ball speed to start speed and gives new move direction based on parameter value
         speed = startSpeed;
-        
-        float randomYDir = Random.Range(-0.5f, 0.5f);
-        direction = new Vector2(1f, randomYDir);
+        direction = newDir;
     }
 
     private void FixedUpdate()

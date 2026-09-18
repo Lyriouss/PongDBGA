@@ -5,6 +5,10 @@ public class BallMovement : MonoBehaviour
     [SerializeField] private float startSpeed;
     [SerializeField] private float incrementSpeed;
     [SerializeField] private float maxSpeed;
+    
+    [Header("Audio Clips")]
+    [SerializeField] private AudioClip playerColSFX;
+    [SerializeField] private AudioClip borderColSFX;
 
     private Rigidbody2D rb2D;
     private Vector2 direction;
@@ -43,11 +47,23 @@ public class BallMovement : MonoBehaviour
     {
         //If the collision is with an object with tag "Player"
         if (collision.gameObject.CompareTag("Player"))
+        {
             //Makes a specific calculation of bounce based on point of collision with Player
             BounceOnPlayer(collision);
+            
+            //Plays player collision SFX from AudioManager
+            if (playerColSFX != null)
+                AudioManager.instance.PlaySFX(playerColSFX);
+        }
         else
+        {
             //Makes a calculation of bounce with normal of border
             BounceOnBorder(collision);
+            
+            //Plays border collision SFX from AudioManager
+            if (borderColSFX != null)
+                AudioManager.instance.PlaySFX(borderColSFX);
+        }
     }
 
     private void BounceOnPlayer(Collision2D collision)

@@ -11,6 +11,8 @@ public class ScoreZone : MonoBehaviour
 {
     [SerializeField] private ScorePointFor scorePointFor;
     
+    [SerializeField] private AudioClip scoreSFX;
+    
     public static event Action<ScorePointFor> OnPlayerScore;
     
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,6 +22,10 @@ public class ScoreZone : MonoBehaviour
         {
             //Updates the score in GameManager based on zone
             OnPlayerScore?.Invoke(scorePointFor);
+            
+            //Plays the scoreSFX from AudioManager
+            if (scoreSFX != null)
+                AudioManager.instance.PlaySFX(scoreSFX);
         }
     }
 }

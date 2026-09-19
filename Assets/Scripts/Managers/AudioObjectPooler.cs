@@ -45,7 +45,7 @@ public class AudioObjectPooler : MonoBehaviour
                 return pooledObjects[i];
         }
         
-        //If there are none then instantiates a new prefab and adds that to the pool
+        //If there are none, then instantiates a new prefab and adds that to the pool
         GameObject obj = Instantiate(audioSourcePrefab, transform);
         obj.SetActive(false);
         pooledObjects.Add(obj);

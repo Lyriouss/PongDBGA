@@ -3,7 +3,7 @@
     "name": "InputActions",
     "maps": [
         {
-            "name": "Player",
+            "name": "Play",
             "id": "6361fabd-72bf-4c18-9b00-d1757a456613",
             "actions": [
                 {
@@ -23,6 +23,24 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "e4b741e0-2cb9-4c66-957b-333a6e670da4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ReloadScene",
+                    "type": "Button",
+                    "id": "700b233a-bbc8-4287-9358-f2f78c0c49c4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -91,6 +109,194 @@
                     "action": "P2Movement",
                     "isComposite": false,
                     "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "1efb09b2-78e4-4694-9b60-15482f41428e",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "134eb145-435b-45d9-aa2e-24cf62df8f2f",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReloadScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "StartGame",
+            "id": "4d2bb9ff-8944-429f-b587-3423563b3f0b",
+            "actions": [
+                {
+                    "name": "StartGame",
+                    "type": "Button",
+                    "id": "09b30e0c-b532-46f5-b8d9-677cb9eefded",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "IncrementScore",
+                    "type": "Button",
+                    "id": "0bdb8b0b-85ba-4008-a3f0-72ef02ef3d44",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LowerScore",
+                    "type": "Button",
+                    "id": "c0e8f8e9-57b3-443d-9e95-3203754604d3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7cf2a018-a5dd-49f2-84a0-c04f5aed8567",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "StartGame",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f9e98d65-de35-4f9f-a25b-feaa428dc651",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "IncrementScore",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2852794b-aa9a-4947-8c2d-e079824c6cee",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "IncrementScore",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4841b79f-4904-47a4-acc2-891b88ec4d8e",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LowerScore",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1820b6c3-2261-45a7-83ba-a4fda347583f",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LowerScore",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Pause",
+            "id": "75436914-255d-4e66-a807-10d0a577b8d7",
+            "actions": [
+                {
+                    "name": "Resume",
+                    "type": "Button",
+                    "id": "52ddc703-6cfe-4428-9177-2a138609bf5e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ReloadScene",
+                    "type": "Button",
+                    "id": "107021e3-c052-4856-a0e2-192a7a5c7860",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0fa5d4eb-1419-46dd-ac99-bca68320a719",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Resume",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2c5281b3-f930-4725-8b01-b2db5b816d86",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReloadScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "WinGame",
+            "id": "ea93e7b4-06d5-43c1-b1a7-bf8f8686f5df",
+            "actions": [
+                {
+                    "name": "ReloadScene",
+                    "type": "Button",
+                    "id": "b1a4d6d6-112c-43bb-aa9b-9d368d633812",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "158b7b06-5650-4b7f-a901-b427d8ded8f1",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ReloadScene",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

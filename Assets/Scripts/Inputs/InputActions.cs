@@ -89,7 +89,7 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
     ""name"": ""InputActions"",
     ""maps"": [
         {
-            ""name"": ""Player"",
+            ""name"": ""Play"",
             ""id"": ""6361fabd-72bf-4c18-9b00-d1757a456613"",
             ""actions"": [
                 {
@@ -109,6 +109,24 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Pause"",
+                    ""type"": ""Button"",
+                    ""id"": ""e4b741e0-2cb9-4c66-957b-333a6e670da4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ReloadScene"",
+                    ""type"": ""Button"",
+                    ""id"": ""700b233a-bbc8-4287-9358-f2f78c0c49c4"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -177,21 +195,226 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
                     ""action"": ""P2Movement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1efb09b2-78e4-4694-9b60-15482f41428e"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""134eb145-435b-45d9-aa2e-24cf62df8f2f"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ReloadScene"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""StartGame"",
+            ""id"": ""4d2bb9ff-8944-429f-b587-3423563b3f0b"",
+            ""actions"": [
+                {
+                    ""name"": ""StartGame"",
+                    ""type"": ""Button"",
+                    ""id"": ""09b30e0c-b532-46f5-b8d9-677cb9eefded"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""IncrementScore"",
+                    ""type"": ""Button"",
+                    ""id"": ""0bdb8b0b-85ba-4008-a3f0-72ef02ef3d44"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""LowerScore"",
+                    ""type"": ""Button"",
+                    ""id"": ""c0e8f8e9-57b3-443d-9e95-3203754604d3"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""7cf2a018-a5dd-49f2-84a0-c04f5aed8567"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StartGame"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f9e98d65-de35-4f9f-a25b-feaa428dc651"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""IncrementScore"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2852794b-aa9a-4947-8c2d-e079824c6cee"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""IncrementScore"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4841b79f-4904-47a4-acc2-891b88ec4d8e"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LowerScore"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1820b6c3-2261-45a7-83ba-a4fda347583f"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""LowerScore"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Pause"",
+            ""id"": ""75436914-255d-4e66-a807-10d0a577b8d7"",
+            ""actions"": [
+                {
+                    ""name"": ""Resume"",
+                    ""type"": ""Button"",
+                    ""id"": ""52ddc703-6cfe-4428-9177-2a138609bf5e"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ReloadScene"",
+                    ""type"": ""Button"",
+                    ""id"": ""107021e3-c052-4856-a0e2-192a7a5c7860"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""0fa5d4eb-1419-46dd-ac99-bca68320a719"",
+                    ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Resume"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2c5281b3-f930-4725-8b01-b2db5b816d86"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ReloadScene"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""WinGame"",
+            ""id"": ""ea93e7b4-06d5-43c1-b1a7-bf8f8686f5df"",
+            ""actions"": [
+                {
+                    ""name"": ""ReloadScene"",
+                    ""type"": ""Button"",
+                    ""id"": ""b1a4d6d6-112c-43bb-aa9b-9d368d633812"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""158b7b06-5650-4b7f-a901-b427d8ded8f1"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ReloadScene"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
     ],
     ""controlSchemes"": []
 }");
-        // Player
-        m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_P1Movement = m_Player.FindAction("P1Movement", throwIfNotFound: true);
-        m_Player_P2Movement = m_Player.FindAction("P2Movement", throwIfNotFound: true);
+        // Play
+        m_Play = asset.FindActionMap("Play", throwIfNotFound: true);
+        m_Play_P1Movement = m_Play.FindAction("P1Movement", throwIfNotFound: true);
+        m_Play_P2Movement = m_Play.FindAction("P2Movement", throwIfNotFound: true);
+        m_Play_Pause = m_Play.FindAction("Pause", throwIfNotFound: true);
+        m_Play_ReloadScene = m_Play.FindAction("ReloadScene", throwIfNotFound: true);
+        // StartGame
+        m_StartGame = asset.FindActionMap("StartGame", throwIfNotFound: true);
+        m_StartGame_StartGame = m_StartGame.FindAction("StartGame", throwIfNotFound: true);
+        m_StartGame_IncrementScore = m_StartGame.FindAction("IncrementScore", throwIfNotFound: true);
+        m_StartGame_LowerScore = m_StartGame.FindAction("LowerScore", throwIfNotFound: true);
+        // Pause
+        m_Pause = asset.FindActionMap("Pause", throwIfNotFound: true);
+        m_Pause_Resume = m_Pause.FindAction("Resume", throwIfNotFound: true);
+        m_Pause_ReloadScene = m_Pause.FindAction("ReloadScene", throwIfNotFound: true);
+        // WinGame
+        m_WinGame = asset.FindActionMap("WinGame", throwIfNotFound: true);
+        m_WinGame_ReloadScene = m_WinGame.FindAction("ReloadScene", throwIfNotFound: true);
     }
 
     ~@InputActions()
     {
-        UnityEngine.Debug.Assert(!m_Player.enabled, "This will cause a leak and performance issues, InputActions.Player.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Play.enabled, "This will cause a leak and performance issues, InputActions.Play.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_StartGame.enabled, "This will cause a leak and performance issues, InputActions.StartGame.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Pause.enabled, "This will cause a leak and performance issues, InputActions.Pause.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_WinGame.enabled, "This will cause a leak and performance issues, InputActions.WinGame.Disable() has not been called.");
     }
 
     /// <summary>
@@ -264,34 +487,44 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Player
-    private readonly InputActionMap m_Player;
-    private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_P1Movement;
-    private readonly InputAction m_Player_P2Movement;
+    // Play
+    private readonly InputActionMap m_Play;
+    private List<IPlayActions> m_PlayActionsCallbackInterfaces = new List<IPlayActions>();
+    private readonly InputAction m_Play_P1Movement;
+    private readonly InputAction m_Play_P2Movement;
+    private readonly InputAction m_Play_Pause;
+    private readonly InputAction m_Play_ReloadScene;
     /// <summary>
-    /// Provides access to input actions defined in input action map "Player".
+    /// Provides access to input actions defined in input action map "Play".
     /// </summary>
-    public struct PlayerActions
+    public struct PlayActions
     {
         private @InputActions m_Wrapper;
 
         /// <summary>
         /// Construct a new instance of the input action map wrapper class.
         /// </summary>
-        public PlayerActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        public PlayActions(@InputActions wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "Player/P1Movement".
+        /// Provides access to the underlying input action "Play/P1Movement".
         /// </summary>
-        public InputAction @P1Movement => m_Wrapper.m_Player_P1Movement;
+        public InputAction @P1Movement => m_Wrapper.m_Play_P1Movement;
         /// <summary>
-        /// Provides access to the underlying input action "Player/P2Movement".
+        /// Provides access to the underlying input action "Play/P2Movement".
         /// </summary>
-        public InputAction @P2Movement => m_Wrapper.m_Player_P2Movement;
+        public InputAction @P2Movement => m_Wrapper.m_Play_P2Movement;
+        /// <summary>
+        /// Provides access to the underlying input action "Play/Pause".
+        /// </summary>
+        public InputAction @Pause => m_Wrapper.m_Play_Pause;
+        /// <summary>
+        /// Provides access to the underlying input action "Play/ReloadScene".
+        /// </summary>
+        public InputAction @ReloadScene => m_Wrapper.m_Play_ReloadScene;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
-        public InputActionMap Get() { return m_Wrapper.m_Player; }
+        public InputActionMap Get() { return m_Wrapper.m_Play; }
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
         public void Enable() { Get().Enable(); }
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
@@ -299,9 +532,9 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
         public bool enabled => Get().enabled;
         /// <summary>
-        /// Implicitly converts an <see ref="PlayerActions" /> to an <see ref="InputActionMap" /> instance.
+        /// Implicitly converts an <see ref="PlayActions" /> to an <see ref="InputActionMap" /> instance.
         /// </summary>
-        public static implicit operator InputActionMap(PlayerActions set) { return set.Get(); }
+        public static implicit operator InputActionMap(PlayActions set) { return set.Get(); }
         /// <summary>
         /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
         /// </summary>
@@ -309,17 +542,23 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
         /// </remarks>
-        /// <seealso cref="PlayerActions" />
-        public void AddCallbacks(IPlayerActions instance)
+        /// <seealso cref="PlayActions" />
+        public void AddCallbacks(IPlayActions instance)
         {
-            if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
+            if (instance == null || m_Wrapper.m_PlayActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_PlayActionsCallbackInterfaces.Add(instance);
             @P1Movement.started += instance.OnP1Movement;
             @P1Movement.performed += instance.OnP1Movement;
             @P1Movement.canceled += instance.OnP1Movement;
             @P2Movement.started += instance.OnP2Movement;
             @P2Movement.performed += instance.OnP2Movement;
             @P2Movement.canceled += instance.OnP2Movement;
+            @Pause.started += instance.OnPause;
+            @Pause.performed += instance.OnPause;
+            @Pause.canceled += instance.OnPause;
+            @ReloadScene.started += instance.OnReloadScene;
+            @ReloadScene.performed += instance.OnReloadScene;
+            @ReloadScene.canceled += instance.OnReloadScene;
         }
 
         /// <summary>
@@ -328,8 +567,8 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
         /// </remarks>
-        /// <seealso cref="PlayerActions" />
-        private void UnregisterCallbacks(IPlayerActions instance)
+        /// <seealso cref="PlayActions" />
+        private void UnregisterCallbacks(IPlayActions instance)
         {
             @P1Movement.started -= instance.OnP1Movement;
             @P1Movement.performed -= instance.OnP1Movement;
@@ -337,15 +576,21 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
             @P2Movement.started -= instance.OnP2Movement;
             @P2Movement.performed -= instance.OnP2Movement;
             @P2Movement.canceled -= instance.OnP2Movement;
+            @Pause.started -= instance.OnPause;
+            @Pause.performed -= instance.OnPause;
+            @Pause.canceled -= instance.OnPause;
+            @ReloadScene.started -= instance.OnReloadScene;
+            @ReloadScene.performed -= instance.OnReloadScene;
+            @ReloadScene.canceled -= instance.OnReloadScene;
         }
 
         /// <summary>
-        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="PlayerActions.UnregisterCallbacks(IPlayerActions)" />.
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="PlayActions.UnregisterCallbacks(IPlayActions)" />.
         /// </summary>
-        /// <seealso cref="PlayerActions.UnregisterCallbacks(IPlayerActions)" />
-        public void RemoveCallbacks(IPlayerActions instance)
+        /// <seealso cref="PlayActions.UnregisterCallbacks(IPlayActions)" />
+        public void RemoveCallbacks(IPlayActions instance)
         {
-            if (m_Wrapper.m_PlayerActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_PlayActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
@@ -355,27 +600,348 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// <remarks>
         /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
         /// </remarks>
-        /// <seealso cref="PlayerActions.AddCallbacks(IPlayerActions)" />
-        /// <seealso cref="PlayerActions.RemoveCallbacks(IPlayerActions)" />
-        /// <seealso cref="PlayerActions.UnregisterCallbacks(IPlayerActions)" />
-        public void SetCallbacks(IPlayerActions instance)
+        /// <seealso cref="PlayActions.AddCallbacks(IPlayActions)" />
+        /// <seealso cref="PlayActions.RemoveCallbacks(IPlayActions)" />
+        /// <seealso cref="PlayActions.UnregisterCallbacks(IPlayActions)" />
+        public void SetCallbacks(IPlayActions instance)
         {
-            foreach (var item in m_Wrapper.m_PlayerActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_PlayActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_PlayerActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_PlayActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
     /// <summary>
-    /// Provides a new <see cref="PlayerActions" /> instance referencing this action map.
+    /// Provides a new <see cref="PlayActions" /> instance referencing this action map.
     /// </summary>
-    public PlayerActions @Player => new PlayerActions(this);
+    public PlayActions @Play => new PlayActions(this);
+
+    // StartGame
+    private readonly InputActionMap m_StartGame;
+    private List<IStartGameActions> m_StartGameActionsCallbackInterfaces = new List<IStartGameActions>();
+    private readonly InputAction m_StartGame_StartGame;
+    private readonly InputAction m_StartGame_IncrementScore;
+    private readonly InputAction m_StartGame_LowerScore;
     /// <summary>
-    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Player" which allows adding and removing callbacks.
+    /// Provides access to input actions defined in input action map "StartGame".
     /// </summary>
-    /// <seealso cref="PlayerActions.AddCallbacks(IPlayerActions)" />
-    /// <seealso cref="PlayerActions.RemoveCallbacks(IPlayerActions)" />
-    public interface IPlayerActions
+    public struct StartGameActions
+    {
+        private @InputActions m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public StartGameActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "StartGame/StartGame".
+        /// </summary>
+        public InputAction @StartGame => m_Wrapper.m_StartGame_StartGame;
+        /// <summary>
+        /// Provides access to the underlying input action "StartGame/IncrementScore".
+        /// </summary>
+        public InputAction @IncrementScore => m_Wrapper.m_StartGame_IncrementScore;
+        /// <summary>
+        /// Provides access to the underlying input action "StartGame/LowerScore".
+        /// </summary>
+        public InputAction @LowerScore => m_Wrapper.m_StartGame_LowerScore;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_StartGame; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="StartGameActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(StartGameActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="StartGameActions" />
+        public void AddCallbacks(IStartGameActions instance)
+        {
+            if (instance == null || m_Wrapper.m_StartGameActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_StartGameActionsCallbackInterfaces.Add(instance);
+            @StartGame.started += instance.OnStartGame;
+            @StartGame.performed += instance.OnStartGame;
+            @StartGame.canceled += instance.OnStartGame;
+            @IncrementScore.started += instance.OnIncrementScore;
+            @IncrementScore.performed += instance.OnIncrementScore;
+            @IncrementScore.canceled += instance.OnIncrementScore;
+            @LowerScore.started += instance.OnLowerScore;
+            @LowerScore.performed += instance.OnLowerScore;
+            @LowerScore.canceled += instance.OnLowerScore;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="StartGameActions" />
+        private void UnregisterCallbacks(IStartGameActions instance)
+        {
+            @StartGame.started -= instance.OnStartGame;
+            @StartGame.performed -= instance.OnStartGame;
+            @StartGame.canceled -= instance.OnStartGame;
+            @IncrementScore.started -= instance.OnIncrementScore;
+            @IncrementScore.performed -= instance.OnIncrementScore;
+            @IncrementScore.canceled -= instance.OnIncrementScore;
+            @LowerScore.started -= instance.OnLowerScore;
+            @LowerScore.performed -= instance.OnLowerScore;
+            @LowerScore.canceled -= instance.OnLowerScore;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="StartGameActions.UnregisterCallbacks(IStartGameActions)" />.
+        /// </summary>
+        /// <seealso cref="StartGameActions.UnregisterCallbacks(IStartGameActions)" />
+        public void RemoveCallbacks(IStartGameActions instance)
+        {
+            if (m_Wrapper.m_StartGameActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="StartGameActions.AddCallbacks(IStartGameActions)" />
+        /// <seealso cref="StartGameActions.RemoveCallbacks(IStartGameActions)" />
+        /// <seealso cref="StartGameActions.UnregisterCallbacks(IStartGameActions)" />
+        public void SetCallbacks(IStartGameActions instance)
+        {
+            foreach (var item in m_Wrapper.m_StartGameActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_StartGameActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="StartGameActions" /> instance referencing this action map.
+    /// </summary>
+    public StartGameActions @StartGame => new StartGameActions(this);
+
+    // Pause
+    private readonly InputActionMap m_Pause;
+    private List<IPauseActions> m_PauseActionsCallbackInterfaces = new List<IPauseActions>();
+    private readonly InputAction m_Pause_Resume;
+    private readonly InputAction m_Pause_ReloadScene;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "Pause".
+    /// </summary>
+    public struct PauseActions
+    {
+        private @InputActions m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public PauseActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "Pause/Resume".
+        /// </summary>
+        public InputAction @Resume => m_Wrapper.m_Pause_Resume;
+        /// <summary>
+        /// Provides access to the underlying input action "Pause/ReloadScene".
+        /// </summary>
+        public InputAction @ReloadScene => m_Wrapper.m_Pause_ReloadScene;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_Pause; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="PauseActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(PauseActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="PauseActions" />
+        public void AddCallbacks(IPauseActions instance)
+        {
+            if (instance == null || m_Wrapper.m_PauseActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_PauseActionsCallbackInterfaces.Add(instance);
+            @Resume.started += instance.OnResume;
+            @Resume.performed += instance.OnResume;
+            @Resume.canceled += instance.OnResume;
+            @ReloadScene.started += instance.OnReloadScene;
+            @ReloadScene.performed += instance.OnReloadScene;
+            @ReloadScene.canceled += instance.OnReloadScene;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="PauseActions" />
+        private void UnregisterCallbacks(IPauseActions instance)
+        {
+            @Resume.started -= instance.OnResume;
+            @Resume.performed -= instance.OnResume;
+            @Resume.canceled -= instance.OnResume;
+            @ReloadScene.started -= instance.OnReloadScene;
+            @ReloadScene.performed -= instance.OnReloadScene;
+            @ReloadScene.canceled -= instance.OnReloadScene;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="PauseActions.UnregisterCallbacks(IPauseActions)" />.
+        /// </summary>
+        /// <seealso cref="PauseActions.UnregisterCallbacks(IPauseActions)" />
+        public void RemoveCallbacks(IPauseActions instance)
+        {
+            if (m_Wrapper.m_PauseActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="PauseActions.AddCallbacks(IPauseActions)" />
+        /// <seealso cref="PauseActions.RemoveCallbacks(IPauseActions)" />
+        /// <seealso cref="PauseActions.UnregisterCallbacks(IPauseActions)" />
+        public void SetCallbacks(IPauseActions instance)
+        {
+            foreach (var item in m_Wrapper.m_PauseActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_PauseActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="PauseActions" /> instance referencing this action map.
+    /// </summary>
+    public PauseActions @Pause => new PauseActions(this);
+
+    // WinGame
+    private readonly InputActionMap m_WinGame;
+    private List<IWinGameActions> m_WinGameActionsCallbackInterfaces = new List<IWinGameActions>();
+    private readonly InputAction m_WinGame_ReloadScene;
+    /// <summary>
+    /// Provides access to input actions defined in input action map "WinGame".
+    /// </summary>
+    public struct WinGameActions
+    {
+        private @InputActions m_Wrapper;
+
+        /// <summary>
+        /// Construct a new instance of the input action map wrapper class.
+        /// </summary>
+        public WinGameActions(@InputActions wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "WinGame/ReloadScene".
+        /// </summary>
+        public InputAction @ReloadScene => m_Wrapper.m_WinGame_ReloadScene;
+        /// <summary>
+        /// Provides access to the underlying input action map instance.
+        /// </summary>
+        public InputActionMap Get() { return m_Wrapper.m_WinGame; }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
+        public void Enable() { Get().Enable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
+        public void Disable() { Get().Disable(); }
+        /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
+        public bool enabled => Get().enabled;
+        /// <summary>
+        /// Implicitly converts an <see ref="WinGameActions" /> to an <see ref="InputActionMap" /> instance.
+        /// </summary>
+        public static implicit operator InputActionMap(WinGameActions set) { return set.Get(); }
+        /// <summary>
+        /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <param name="instance">Callback instance.</param>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
+        /// </remarks>
+        /// <seealso cref="WinGameActions" />
+        public void AddCallbacks(IWinGameActions instance)
+        {
+            if (instance == null || m_Wrapper.m_WinGameActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_WinGameActionsCallbackInterfaces.Add(instance);
+            @ReloadScene.started += instance.OnReloadScene;
+            @ReloadScene.performed += instance.OnReloadScene;
+            @ReloadScene.canceled += instance.OnReloadScene;
+        }
+
+        /// <summary>
+        /// Removes <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
+        /// </summary>
+        /// <remarks>
+        /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
+        /// </remarks>
+        /// <seealso cref="WinGameActions" />
+        private void UnregisterCallbacks(IWinGameActions instance)
+        {
+            @ReloadScene.started -= instance.OnReloadScene;
+            @ReloadScene.performed -= instance.OnReloadScene;
+            @ReloadScene.canceled -= instance.OnReloadScene;
+        }
+
+        /// <summary>
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="WinGameActions.UnregisterCallbacks(IWinGameActions)" />.
+        /// </summary>
+        /// <seealso cref="WinGameActions.UnregisterCallbacks(IWinGameActions)" />
+        public void RemoveCallbacks(IWinGameActions instance)
+        {
+            if (m_Wrapper.m_WinGameActionsCallbackInterfaces.Remove(instance))
+                UnregisterCallbacks(instance);
+        }
+
+        /// <summary>
+        /// Replaces all existing callback instances and previously registered input action callbacks associated with them with callbacks provided via <param cref="instance" />.
+        /// </summary>
+        /// <remarks>
+        /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
+        /// </remarks>
+        /// <seealso cref="WinGameActions.AddCallbacks(IWinGameActions)" />
+        /// <seealso cref="WinGameActions.RemoveCallbacks(IWinGameActions)" />
+        /// <seealso cref="WinGameActions.UnregisterCallbacks(IWinGameActions)" />
+        public void SetCallbacks(IWinGameActions instance)
+        {
+            foreach (var item in m_Wrapper.m_WinGameActionsCallbackInterfaces)
+                UnregisterCallbacks(item);
+            m_Wrapper.m_WinGameActionsCallbackInterfaces.Clear();
+            AddCallbacks(instance);
+        }
+    }
+    /// <summary>
+    /// Provides a new <see cref="WinGameActions" /> instance referencing this action map.
+    /// </summary>
+    public WinGameActions @WinGame => new WinGameActions(this);
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Play" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="PlayActions.AddCallbacks(IPlayActions)" />
+    /// <seealso cref="PlayActions.RemoveCallbacks(IPlayActions)" />
+    public interface IPlayActions
     {
         /// <summary>
         /// Method invoked when associated input action "P1Movement" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
@@ -391,5 +957,85 @@ public partial class @InputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnP2Movement(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Pause" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPause(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ReloadScene" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnReloadScene(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "StartGame" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="StartGameActions.AddCallbacks(IStartGameActions)" />
+    /// <seealso cref="StartGameActions.RemoveCallbacks(IStartGameActions)" />
+    public interface IStartGameActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "StartGame" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnStartGame(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "IncrementScore" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnIncrementScore(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "LowerScore" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnLowerScore(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Pause" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="PauseActions.AddCallbacks(IPauseActions)" />
+    /// <seealso cref="PauseActions.RemoveCallbacks(IPauseActions)" />
+    public interface IPauseActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "Resume" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnResume(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ReloadScene" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnReloadScene(InputAction.CallbackContext context);
+    }
+    /// <summary>
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "WinGame" which allows adding and removing callbacks.
+    /// </summary>
+    /// <seealso cref="WinGameActions.AddCallbacks(IWinGameActions)" />
+    /// <seealso cref="WinGameActions.RemoveCallbacks(IWinGameActions)" />
+    public interface IWinGameActions
+    {
+        /// <summary>
+        /// Method invoked when associated input action "ReloadScene" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnReloadScene(InputAction.CallbackContext context);
     }
 }

@@ -2,7 +2,7 @@
 
 
 
-Il progetto è stato iniziato dalla costruzione della scena mettendo le cose necessarie per fare PONG, quindi i player, la palla, il bordi e il punteggio nella UI. Queste cose sono state implementati usando sprite e collider2D visto che usando asset 3D per un gioco in 2D l'ho trovato evitabile. 
+Il progetto è stato iniziato dalla costruzione della scena mettendo le cose necessarie per fare PONG, quindi i player, la palla, il bordi e il punteggio nella UI. Queste cose sono state implementati usando sprite e collider2D visto che usando asset 3D per un gioco in 2D l'ho trovato evitabile.
 
 Dopo averli implementati queste cose sono partito dalla logica del movimento della palla e il rimbalzo sui collider. Per il rimbalzo ho voluto fare una fisica personallizato e non built-in da Unity, quindi la palla muove ad una velocità costante e ogni volta che va in contatto con un collider prende la normale del punto di contatto e calcola una nuova direzione specchiata in base alla normale.
 
@@ -14,9 +14,7 @@ Per rendere il gioco il più fedele possibile all'originale, ho modificato il mo
 
 Con il gioco creato con il gameplay e sistema di punteggio, tutti gli aspetti necessari per creare PONG sono stati fatti.
 
-Da quel punto ho iniziato ad aggiungere feature opzionali, il primo essendo l'audio prendendo gli asset da Google e implementadoli nel progetto quando la palla collide ho un punto è stato segnato gestiti da un AudioManager che chiama da un pooler un prefab per avviare il suono. Il secondo è stato di implementare un tasto di avviare la partita invece di farlo avviare automaticamente sull'apertura dell'applicazione e un tasto per mettere in pausa il gioco modificando l'Input, Game e UI Manager per farlo. Il terzo e ultima è stato di implementare un game loop, ovvero scegliere all'inizio un punteggio da arrivare per poter vincere, questa feature l'ho reso modificabile dal giocatore e salvato quando si avvia una partita. Per renderlo possible ho messo altri paneli nella UI e modificato l'Input, Game e UI Manager di nuovo.
-
-Nello svillupo del codice ho provato il più possibile di aggiungere commenti nel mentre che scrivevo il codice ma ho comunque fatto una revisione finale per metterli nei punti in cui mancavano.
+Da quel punto ho iniziato ad aggiungere feature opzionali, il primo essendo l'audio, il secondo l'avviamento della partita e pausa e il terzo un game loop con un limite di punti per vincere.
 
 
 
